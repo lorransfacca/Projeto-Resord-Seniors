@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https:code.responsivevoice.org/responsivevoice.js'></script>
+    <script type="text/javascript">responsiveVoice.setDefaultVoice('Brazilian Portuguese Male')</script>
+    <title>Risord Sêniors</title>
+<style>
+      
+        
+      body{
+            background-color: greenyellow;
+        }
+
+         /*logotipo*/
+       
+        .texto{
+            font-size:97px;
+            font-family:"3D LET (BRK)";
+            color:green;
+            text-align: center;
+            margin-top: 5px;
+            margin-block-end: 10px;
+            cursor:default;
+        }
+
+        .span-header{
+            font-size:80px;
+            font-family:"3D LET (BRK)";
+            color:green;
+            text-align: center;
+            margin-top: 5px;
+            margin-block-end: 10px;
+        }
+
+        .logo     
+        {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            transform: translate(-25%,-25%);
+            letter-spacing: 5px;
+            animation: animateText 2s ease-in-out infinite;
+            animation-delay: -1s;
+        }
+        @keyframes animateText
+        {
+            0%,50%
+            {
+                color: gray;
+                text-shadow: none;
+            }
+            50.1%,100%
+            {   color: yellow;
+                text-shadow: 0 0 5px yellow,
+                             0 0 15px yellow;
+            }
+        }
+   
+
+ /*quem somos*/
+        h1{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            text-align:center;
+            color:green;
+          
+        }
+
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:9pt;
+            color:green;
+            margin-top: center;
+        }
+        h4{
+            font-size:8px;
+        }
+
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            font-size: 20px;
+            color:green;
+            text-align: center;
+            border:5px solid green;
+            border-style:groove;
+            border-color:green green green green;  
+        }
+         /*final do site*/
+
+        h4{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+  
+      /*status/mapa*/
+        .relogio{
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            width: 160px;
+            background-color: #000;
+            border:10px solid yellow;
+            border-style:groove;
+            border-color:green green green green;
+            cursor:default;
+        }
+
+        .status{
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            width: 130px;
+        }
+
+        a{
+            text-decoration: none;
+            color: green;
+        }
+
+        .img{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align:center;
+            font-size:9pt;
+            color:green;
+            margin-top: center;
+        }
+
+        .menu ul li input{
+            background-color: greenyellow;
+            color: green;
+            float: left;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            font-size: 25px;
+            object-fit: contain;
+            border-radius:none;
+            border: none;
+            cursor:Pointer;
+        }
+
+        .menu ul li{
+            background-color: greenyellow;
+            color: green;
+            float: left;
+            width: 335px;
+            height: 40px;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            font-size: 25px;
+            object-fit: contain;
+        }
+         /*submenu*/
+
+        .submenu ul li{
+            background-color: greenyellow;
+            color: green;
+            float: center;
+            width: 114px;
+            height: 40px;
+            display: inline-block;
+            text-align: left;
+            line-height: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+        .submenu ul{
+            padding: 0;
+        }
+        .submenu ul ul{
+            display: none;
+        }
+
+        .submenu ul li:hover > ul{
+            display: block;
+        }
+
+        .submenu table{
+            position:absolute;
+        }
+
+        table{
+            border-color: yellow;
+        }
+
+         /*final-submenu*/
+
+        .menu ul ol{
+            background-color: greenyellow;
+            color: greenyellow;
+            float: left;
+            width: 200px;
+            height: 40px;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            font-size: 25px;
+            margin-left: 30px;
+        }
+
+        .button{
+            border-radius:none;
+            border:none;
+            outline: thin dotted;
+            outline: 0px auto;
+            outline-offset: 0px;
+        }
+
+        input[type="button"]{
+            outline:none;
+}
+        input[type="button"]::-moz-focus-inner {
+            border: 0;
+}
+
+        /*Tablets*/
+        @media screen and (max-width: 768px){
+            section, .slider {
+                width: 100%;
+                padding: 0;
+            }
+           
+        }
+
+        /*Celular/mobile*/
+        @media screen and (max-width: 600px){
+            nav li {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+    
+        }
+
+        /*Telefone/email/mapa*/
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: green;
+        }
+
+        .container
+        {
+            position: relative;
+            width: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .container .box
+        {
+            position: relative;
+            width: 200px;
+            height: 250px;
+            margin: 30px;
+            background: greenyellow;
+            box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.05);
+            border:4px solid green;
+            border-style:groove;
+            border-color:green green green green;
+        }
+
+        .container .box .imgBx
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+        }
+
+        .container .box:hover .imgBx
+        {
+            transform: scale(0);
+            transition-delay: 0s;
+        }
+
+        .container .box .imgBx img
+        {
+            max-width: 100px;
+            
+        }
+
+        .container .box .content
+        {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            transition: 0.5s;
+            background: green;
+            transform: scale(0);
+            transition-delay: 0s;
+            
+        }
+
+        .container .box:hover .content
+        {
+            transform: scale(1);
+            transition-delay: 0.5s;
+        }
+
+        .container .box:nth-child(2) .content
+        {
+            background: green;
+        }
+
+        .container .box:nth-child(3) .content
+        {
+            background:green;
+        }
+
+        .container .box .content .icon img
+        {
+            max-width: 80px;
+            filter: invert(1);
+        }
+
+        .container .box .content h3
+        {
+            color: greenyellow;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        .container .box .content h4
+        {
+            color: greenyellow;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+         /*Telefone/email/mapa*/
+
+         .slider{
+            width: 800px;
+            height: 600px;
+            background: url(índice2.jpg);
+            margin: 100px auto;
+            animation: slide 20s infinite;
+            border:15px solid yellow;
+            border-style:groove;
+            border-color:green green green green;
+           
+        }
+
+        @keyframes slide{
+            25%{
+                background-image: url(índice.jpg);
+                   
+            }
+            50%{
+                background-image: url(índice3.jpg);
+                 
+            }
+            75%{
+                background-image: url(índice4.jpg);
+            }
+            100%{
+                background-image: url(índice2.jpg);
+               
+            }   
+        }
+
+
+    </style>
+
+    </style>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family:Arial, Helvetica, sans-serif  
+
+        }
+        body
+        {
+            background: greenyellow;
+        }
+        .action
+        {
+            top: 20px;
+            right: 30px;
+        }
+        .action .profile
+        {  
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .action .profile img
+        {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .action .menu
+        {
+            top:80px;
+            right: -10px;
+            padding: 10px 20px;
+            background: gray;
+            width: 200px;
+            box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            transition: 0.5s;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .action .menu.active
+        {
+            top: 80px;
+            visibility: visible;
+            opacity: 1;
+        }
+    
+        .action .menu::before
+        {
+            content: '';
+           
+            top: 5px;
+            right: 28px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            transform: rotate(45deg);
+        }
+  
+</style>
+<style>
+    marquee h5
+    {
+        background-color:green;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #FF0000;
+    }
+</style>
+
+<style>
+    table
+    {
+        background-color:greenyellow;
+        border:10px solid yellow;
+        border-style:groove;
+        border-color:green green green green;
+    }
+</style> 
+<style>
+    .txt
+    {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div class="texto">R<span class="span-header">isord</span><div class="texto">S<span class="span-header">eniors</span><div class="box"></div>
+</body>
+<body>
+    <marquee scrollamount="1.5" direction="up"><h5><center> NÃO PERCA:<FONT COLOR="yellow">Show do Roberto Carlos</FONT> AO VIVO!</center></h5></marquee>    
+</body>
+<nav class="menu">
+        
+    <ul>
+        <ol>        
+            <nav>
+                <div class="relogio">
+                    <div id="clock" style="display: none;">00:00:00</div>
+                    <div id="textostatus"title="Status"></div>
+                    <script>
+                        var relogio = document.getElementById('clock');
+                        var statusRelogio = document.getElementById('textostatus');
+                        var dia = document.getElementById('textostatus');
+                        function manipularRelogio() {
+                            var hoje = new Date();
+    
+                            var horas = hoje.getHours();
+                            if (horas < 10) {
+                                horas = "0" + horas;
+                            }
+    
+                            var minutos = hoje.getMinutes();
+                            if (minutos < 10) {
+                                minutos = "0" + minutos;
+                            }
+    
+                            var segundos = hoje.getSeconds();
+                            if (segundos < 10) {
+                                segundos = "0" + segundos;
+                            }
+                            
+                            if (horas >= "12" && horas <= "13") {
+                                relogio.style.color = "yellow";
+                                statusRelogio.innerHTML = "&#9832;";
+                                statusRelogio.style.color = "yellow";
+                                statusRelogio.style.fontSize = "24pt";
+                            }
+                            
+                            if (horas >= "18" || horas <= "07") {
+                                relogio.style.color = "red";
+                                statusRelogio.innerHTML = "Fechado";
+                                statusRelogio.style.color = "red";
+                                statusRelogio.style.fontSize = "24pt";
+                            }
+    
+                            if ((horas > "07" && horas < "12") || (horas > "13" && horas < "18")) {
+                                relogio.style.color = "#31e84c";
+                                statusRelogio.innerHTML = "Aberto";
+                                statusRelogio.style.color = "#31e84c";
+                                statusRelogio.style.fontSize = "24pt";
+                            }
+    
+                            var dia = hoje.getDay();
+                            if (dia == 0 || dia == 5 || dia == 6) {
+                                relogio.style.color = "red";
+                                statusRelogio.innerHTML = "Fechado";
+                                statusRelogio.style.color = "red";
+                            }
+    
+                            relogio.innerHTML = horas + ":" + minutos + ":" + segundos;
+                        }
+                        window.setInterval("manipularRelogio()", 1000);
+                    </script>
+                </div>               
+            </nav> 
+        </ol>
+
+        <a href=""><nav class="submenu"title="Intinerários">
+            <ul>
+                <li>&#9660;
+                    <ul>
+                        <li>
+                            <table>
+                                <td>
+                                    <div class="texto"style="font-size:15px;font-family:Arial; color:#green;">
+                                        Segunda-Feira
+                                         \
+                                        Terça-Feira
+                                         \
+                                        Quarta-Feira
+                                         \
+                                        Qinta-Feira: dás
+                                        08:00 ás 17:00   
+                                    </div>
+                                    <div class="txt"style="font-size:17px;color:green;">------------------------------------------------------------------------------------------</div>
+                                    <div class="txt"style="font-size:17px;font-family:Arial;color:orange;">Almoço ao 12:00 á 13:00   </div>
+                                    <div class="txt"style="font-size:17px;color:green;">------------------------------------------------------------------------------------------</div>
+                                    
+                                    <div class="txt"style="font-size:17px;font-family:Arial;color:red;">
+                                        Sexta-Feira
+                                         \
+                                        Sábado
+                                         \
+                                        Domingo
+                                         \
+                                        Feriados:
+                                        Fechado
+                                    </div>
+                                </td>
+                            </table>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </a>
+
+            
+        
+        
+                
+        <li><a href="forms.html"title="Formulário">Formulário</a></li>
+        <li><body>
+            <input type="button" button-border="none" value="Quem Somos" autoplay controls loop onclick='responsiveVoice.speak("VENHA CONHECER NOSSO ESPAÇO E RELAXAR NO RISORT SENIOR, TEMOS OS MELHORES ATENDIMENTO PARA TODOS DA TERCEIRA IDADEVOCÊ AINDA VAI APROVEITAR E DANÇAR AO VIVO AO SOM DO NOSSO REI ROBERTO CARLOS.")'title="Acessibilidade">
+        </body></li>
+    </ul>
+</nav>
+
+<div class="slider"></div> 
+
+<h1>Quem Somos</h1>
+
+<h2>
+    VENHA CONHECER NOSSO ESPAÇO E RELAXAR NO RISORTE  SÊNIOR, TEMOS OS MELHORES ATENDIMENTO PARA TODOS DA TERCEIRA IDADE
+VOCÊ AINDA VAI APROVEITAR E DANÇAR AO VIVO AO SOM DO NOSSO REI ROBERTO CARLOS
+
+</h2>
+</body>
+
+<body>
+    <center>
+    <div class="container">
+        <div class="box"title="Telefone">
+            <div class="imgBx">
+                <img src="call.png">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <img src="call.png">
+                </div>
+                <h3>Telefone:</h3>
+                <h4>☏ (11)0000-0000</h4>
+                <h4>✆ (11)90000-0000</h4>
+            </div>
+        </div>
+        <div class="box"title="Email">
+            <div class="imgBx">
+                <img src="email.png">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <img src="email.png">
+                </div>
+                <h3>Email:</h3>
+                <h4>ridordseniors@gmail.com</h4>
+                
+            </div>
+        </div>
+        <div class="box"title="Localização">
+            <div class="imgBx">
+                <img src="map.png">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <img src="map.png">
+                </div>
+                <h3>Endereco:</h3>
+                <h4>Risord Seniors:</h4>
+                <h4>Rua do idoso, 100, vila antiga</h4>
+            </div>
+        </div>
+    </div>
+
+    <img class="selo" src="https://lh3.googleusercontent.com/-1ILjd9EYjZU/TpCC5o4AyZI/AAAAAAAAAXM/Lvi8t6ZllX4/s100/DH.png" alt="https://lh3.googleusercontent.com/-1ILjd9EYjZU/TpCC5o4AyZI/AAAAAAAAAXM/Lvi8t6ZllX4/s100/DH.png">
+           <h3> © 2017  -  <script>document.write( ano + "<br>");</script> RISORDSÊNIORS, Todos os Direitos Reservados<br>Desenvolvido por Lorrans Facca</h3>
+ </center>           
+</body>
+</html>
